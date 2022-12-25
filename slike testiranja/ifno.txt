@@ -1,0 +1,20 @@
+import { test, expect } from '@playwright/test';
+
+test('Simple basic test', async ( {page} ) => {
+
+    //test1
+    await page.goto('https://kupina.ba')
+    await page.click('#hesap_btn_title')
+    await page.click('#send2')
+
+    const errorMessage = await page.locator('.swal2-title"')
+    await expect(errorMessage).toContainText('Netačni detalji prijave.')
+
+
+
+} )
+
+voxob41127@covbase.com
+1234567
+
+<h2 class="swal2-title" id="swal2-title" style="display: flex;">Uspješna prijava.</h2>
